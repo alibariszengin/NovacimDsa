@@ -3,6 +3,7 @@ import './App.css';
 import HomePage from './HomePage';
 import Login from './Login';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import AfterLogin from './AfterLogin';
 class App extends Component {
 
 
@@ -20,7 +21,10 @@ class App extends Component {
                
                 <HomePage />
                 <Login />
-                
+
+              </Route>
+              <Route path="/menu">
+                <AfterLogin />
               </Route>
             </Switch>
           </BrowserRouter>

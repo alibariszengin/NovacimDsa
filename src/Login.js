@@ -7,8 +7,12 @@ import { useHistory } from "react-router-dom";
 import { Button } from 'react-bootstrap';
 const Login=() =>{
 	
+	const historySucc = useHistory();
 
-   
+	function succClick() {
+	  historySucc.push("/menu");
+	}
+	
 	const history = useHistory();
 
 	function handleClick() {
@@ -26,6 +30,8 @@ const Login=() =>{
 	        var infos = JSON.parse(localStorage.getItem(i));
 	        if(inpMail == infos.mail && inpPass == infos.password){
 	        	console.log("Yes girdin");
+	        	succClick();
+
 	        }
 	        i--;
 	    }
