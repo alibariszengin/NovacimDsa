@@ -1,22 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Input from './MyInput';
-class Form extends React.Component {
-  render() {
+import onChangeHandler from './App';
+const Form=({change}) =>{
+  
+
     return (
       <form className="tl">
    
         <p>Name:</p>
-        <Input/>
+        <Input />
         <p>Company (Optinal):</p>
         <Input/>
         <p>Email Adress:</p>
-        <Input/>
+        <Input name = {"mail"} onChange={change}/>
         <p>Password:</p>
-        <Input type={`password`}/>
+        <Input name = {"mail"} type={`password`} onChange={change}  />
       </form>
     );
-  }
+
+ 
 }
 
 export default Form;

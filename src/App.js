@@ -1,28 +1,37 @@
-import logo from './logo.svg';
+import React, { Component } from 'react'
 import './App.css';
-import Navbar from './Navbar';
-import Banner from './Banner';
-import Resume from './Resume';
-import SignUp from './Signup';
-import Footer from './Footer';
-import GoToTop from './GoToTop';
-import Contact from './ContactUs';
-function App() {
-  return (
-    <div className="App ">
-      <div className="flex flex-column vh-100">
-          <Navbar />
-          <Banner />
+import HomePage from './HomePage';
+import Login from './Login';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+class App extends Component {
 
+
+  render(){
+    return (
+      <div className="App ">
+        <div >
+          
+          <BrowserRouter>
+            <Switch>
+              <Route exact path="/">
+                <HomePage />
+              </Route>
+              <Route path="/login">
+               
+                <HomePage />
+                <Login />
+                
+              </Route>
+            </Switch>
+          </BrowserRouter>
+
+        </div>
+
+        
       </div>
-      
-      <Resume />
-      <SignUp />
-      <Contact/>
-      <Footer />
-      <GoToTop />
-    </div>
-  );
+    );
+  }
+
 }
 
 export default App;

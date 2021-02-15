@@ -9,10 +9,10 @@ const Banner=() =>{
 		className='bg-light-green h-100 w-100 '>
 			<div className='w-75 center mt6'>
 				<img alt='logo' src={logo} className='w-50'/>
-				<div className='ml4 mt6'>
-					<Link to="resume" className='pointer ba br3 pa2 tc blue mr5 fw6 f2'>Resume</Link>
-					<Link to="SignUp" className='pointer ba br3 pa2 tc blue mr5 fw6 f2'>Sign Up For Free</Link>
-					<Link to="ContactUs" className='pointer ba br3 pa2 tc blue mr5 fw6 f2'>Contact Us</Link>
+				<div className='ml7 mt6' >
+					<Link to="resume" className='fl pointer ba br3 pa2 tc blue mr5 fw6 f2 f4-m'>Resume</Link>
+					<Link to="SignUp" className='fl pointer ba br3 pa2 tc blue mr5 fw6 f2 f4-m' >Sign Up For Free</Link>
+					<Link to="ContactUs" className='fl pointer ba br3 pa2 tc blue mr5 fw6 f2 f4-m'>Contact Us</Link>
 				</div>
 			</div>
 		</div>

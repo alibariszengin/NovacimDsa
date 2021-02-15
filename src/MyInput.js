@@ -1,13 +1,15 @@
 import React from 'react';
 
 
-const Input=(props) =>{
-	let {type}=props;
+const Input=({type, onChange , name ,id}) =>{
+
 	
 	return (
 
-        <input className="br2 bw1 grow b--blue"
-          type={type}
+        <input id={id} className="br2 bw1 grow b--blue"
+          type={type} 
+          onChange={onChange} 
+          name={name}
         />
 	);
 
