@@ -1,0 +1,1 @@
+"start": "cross-env BROWSER=chrome react-scripts start"
