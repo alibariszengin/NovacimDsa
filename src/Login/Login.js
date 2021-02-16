@@ -27,18 +27,23 @@ const Login=() =>{
         i = keys.length;
  		var inpMail=document.getElementById('logMail').value;
  		var inpPass=document.getElementById('logPass').value;
- 		
+ 		console.log(inpMail);
+ 		console.log(inpPass);
+ 		var isIn=false;
 	    while ( i ) {
 
 	        var infos = JSON.parse(localStorage.getItem(i));
 	        if(inpMail == infos.mail && inpPass == infos.password){
 	        	alertify.success("Welcome "+ inpMail);
+	        	isIn=true;
 	        	succClick();
 
 	        }
 	        i--;
 	    }
-		
+		if(!isIn){
+			alertify.error("Your mail or password is wrong :(");
+		}
 	
 	};
 	return (

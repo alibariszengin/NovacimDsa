@@ -23,11 +23,24 @@ class SignUp extends Component{
 	  //localStorage.setItem('mail', mail);
 	  //localStorage.setItem('password', password);
 	  var myObject = { mail: mail, password: password };
-	  localStorage.setItem(this.state.i, JSON.stringify(myObject));
-	  this.state.i=this.state.i+1;
-	  
-	  alertify.success("You just sign up !! ");
-	  console.log("Handeled");
+	 
+	  if(typeof mail !== "undefined"){
+	        let lastAtPos = mail.lastIndexOf('@');
+	        let lastDotPos = mail.lastIndexOf('.');
+
+	        if (!(lastAtPos < lastDotPos && lastAtPos > 0 && mail.indexOf('@@') == -1 && lastDotPos > 2 && (mail.length - lastDotPos) > 2)) {
+	            
+	            alertify.error("Invalid email...");
+	        }
+	        else{
+	        	localStorage.setItem(this.state.i, JSON.stringify(myObject));
+	  			this.state.i=this.state.i+1;
+	  			 alertify.success("You just sign up !! ");
+	  			console.log("Handeled");
+	        }
+       }  
+
+	 
 	};
 	render(){
 		return (
