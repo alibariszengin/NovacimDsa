@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Input=({type, onChange , name ,id}) =>{
+const Input=({type, onChange , name ,id ,style }) =>{
 
 	
 	return (
@@ -10,6 +10,7 @@ const Input=({type, onChange , name ,id}) =>{
           type={type} 
           onChange={onChange} 
           name={name}
+    
         />
 	);
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Input from './MyInput';
-import onChangeHandler from './App';
+import Input from '../../MyInput';
+import onChangeHandler from '../../App';
 const Form=({change}) =>{
   
 
@@ -15,7 +15,7 @@ const Form=({change}) =>{
         <p>Email Adress:</p>
         <Input name = {"mail"} onChange={change}/>
         <p>Password:</p>
-        <Input name = {"mail"} type={`password`} onChange={change}  />
+        <Input name = {"password"} type={`password`} onChange={change}  />
       </form>
     );
 

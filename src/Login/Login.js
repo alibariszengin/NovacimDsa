@@ -1,10 +1,12 @@
 import React , { useState } from 'react';
-import icon from './top.svg';
+import icon from '../top.svg';
 import {Link} from 'react-scroll'
-import Input from './MyInput';
+import Input from '../MyInput';
 import Cancel from './cancel.svg';
 import { useHistory } from "react-router-dom";
 import { Button } from 'react-bootstrap';
+import alertify from "alertifyjs";
+
 const Login=() =>{
 	
 	const historySucc = useHistory();
@@ -25,11 +27,12 @@ const Login=() =>{
         i = keys.length;
  		var inpMail=document.getElementById('logMail').value;
  		var inpPass=document.getElementById('logPass').value;
+ 		
 	    while ( i ) {
 
 	        var infos = JSON.parse(localStorage.getItem(i));
 	        if(inpMail == infos.mail && inpPass == infos.password){
-	        	console.log("Yes girdin");
+	        	alertify.success("Welcome "+ inpMail);
 	        	succClick();
 
 	        }

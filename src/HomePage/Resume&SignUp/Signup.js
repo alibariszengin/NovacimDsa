@@ -26,7 +26,7 @@ class SignUp extends Component{
 	  localStorage.setItem(this.state.i, JSON.stringify(myObject));
 	  this.state.i=this.state.i+1;
 	  
-	  
+	  alertify.success("You just sign up !! ");
 	  console.log("Handeled");
 	};
 	render(){

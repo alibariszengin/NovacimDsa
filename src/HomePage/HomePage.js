@@ -1,10 +1,10 @@
-import Navbar from './Navbar';
-import Banner from './Banner';
-import Resume from './Resume';
-import SignUp from './Signup';
-import Footer from './Footer';
+import Navbar from './Navbar&Banner/Navbar';
+import Banner from './Navbar&Banner/Banner';
+import Resume from './Resume&SignUp/Resume';
+import SignUp from './Resume&SignUp/Signup';
+import Footer from './ContactUs&Footer/Footer';
+import Contact from './ContactUs&Footer/ContactUs';
 import GoToTop from './GoToTop';
-import Contact from './ContactUs';
 
 function HomePage() {
 

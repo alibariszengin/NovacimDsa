@@ -1,9 +1,12 @@
 import React, { Component } from 'react'
 import './App.css';
-import HomePage from './HomePage';
-import Login from './Login';
+import HomePage from './HomePage/HomePage';
+import Login from './Login/Login';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
-import AfterLogin from './AfterLogin';
+
+import Menu from './AfterLogin/Menu';
+import Projects from './AfterLogin/Projects.js';
+import Dashboard from './AfterLogin/Dashboard';
 class App extends Component {
 
 
@@ -23,8 +26,25 @@ class App extends Component {
                 <Login />
 
               </Route>
-              <Route path="/menu">
-                <AfterLogin />
+              <Route exact path="/menu">
+                <div className="w-100 vh-100 flex">
+                  <Menu/>
+                    <Dashboard/>
+                </div>
+              </Route>
+              <Route exact path='/menu/dashboard'>
+                  <div className="w-100 vh-100 flex">
+                    <Menu/>
+                    <Dashboard/>
+                  </div>
+                  
+              </Route>
+              <Route exact path='/menu/projects'>
+                <div className="w-100 vh-100 flex">
+                    <Menu/>
+                    <Projects/>
+                </div>
+                
               </Route>
             </Switch>
           </BrowserRouter>

@@ -1,5 +1,5 @@
 import React from 'react';
-import icon from './top.svg';
+import icon from '../top.svg';
 import {Link} from 'react-scroll'
 const GoToTop=() =>{
 
